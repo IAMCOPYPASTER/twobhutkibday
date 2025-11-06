@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Riddhi & Siddhi 🎉</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #ffdee9 0%, #b5fffc 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 20px;
+  animation: fadeIn 3s ease-in-out;
+}
+
+p {
+  color: #444;
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1rem;
+  animation: fadeInUp 2.5s ease-in-out;
+}
+
+.hearts span {
+  position: absolute;
+  bottom: -20px;
+  color: #ff6b81;
+  font-size: 1.5rem;
+  animation: floatUp 5s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-800px) rotate(360deg); opacity: 0; }
+}
+
+.btn {
+  margin-top: 25px;
+  padding: 10px 25px;
+  background: #333;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  animation: fadeIn 3.5s ease-in-out;
+}
+
+.btn:hover {
+  background: #555;
+  transform: scale(1.05);
+}
+
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>🎂 Happy Birthday Riddhi & Siddhi 🎂</h1>
+    <h2>Two hearts, one vibe, endless memories 💫</h2>
+    <p>
+      From laughter that never ends to chaos that defines friendship — today is your day!<br>
+      May your lives shine brighter than the candles on your cake and your dreams dance like confetti in the wind.
+    </p>
+    <button class="btn" onclick="playMusic()">Play Vibes 🎶</button>
+  </div>  <div class="hearts"></div><audio id="bg-music" src="https://cdn.pixabay.com/download/audio/2023/05/29/audio_9fa5f9d355.mp3?filename=happy-birthday-14494.mp3"></audio>
+
+  <script>
+    // Floating hearts animation
+    const heartsContainer = document.querySelector('.hearts');
+    function createHeart() {
+      const heart = document.createElement('span');
+      heart.innerHTML = '❤';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (3 + Math.random() * 2) + 's';
+      heartsContainer.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+    setInterval(createHeart, 400);
+
+    // Music play
+    function playMusic() {
+      const audio = document.getElementById('bg-music');
+      audio.play();
+    }
+  </script></body>
+</html>
